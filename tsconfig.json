@@ -3,17 +3,52 @@
     "diagnostics": true,
     "esModuleInterop": true,
     "extendedDiagnostics": true,
-    "skipLibCheck": false,
-    "jsx": "preserve",
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
     "lib": [
       "dom",
-      "es2020"
+      "es2022",
+      "dom.iterable",
+      "esnext"
     ],
     "moduleResolution": "node",
     "strict": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
-    "target": "es2020"
+    "target": "es2022",
+    "module": "esnext",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDirs": ["packages/core/src", "packages/react/src"],
+    "allowJs": true,
+    "checkJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "types": ["node", "csstype"],
+    "baseUrl": ".",
+    "paths": {
+      "@stitches/core/*": ["packages/core/src/*"],
+      "@stitches/react/*": ["packages/react/src/*"]
+    }
   },
+  "include": [
+    "packages/*/src/**/*.ts",
+    "packages/*/src/**/*.tsx",
+    "packages/*/__tests__/**/*.ts",
+    "packages/*/__tests__/**/*.tsx"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.js"
+  ]
 }

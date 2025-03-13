@@ -8,6 +8,8 @@ Update June 19, 2023: Stitches is no longer actively maintained due to changes i
 
 # Stitches
 
+Nowoczesna biblioteka CSS-in-JS z zaawansowanymi funkcjami.
+
 ## Style your components with confidence
 
 CSS-in-JS with near-zero runtime, SSR, multi-variant support, and a best-in-class developer experience.
@@ -64,3 +66,55 @@ Here's a list of community-built projects:
 Licensed under the MIT License, Copyright © 2022-present WorkOS.
 
 See [LICENSE](./LICENSE.md) for more information.
+
+## Główne funkcje
+
+### Bento Grid System
+
+Elastyczny system układów Bento Grid z predefiniowanymi szablonami:
+
+- **Modern** - nowoczesny układ z efektem szkła i gradientowym tłem
+- **Classic** - klasyczny układ z wyróżnionym elementem
+- **Magazine** - układ magazynowy z dużym nagłówkiem
+- **Portfolio** - układ galerii/portfolio
+- **Dashboard** - zaawansowany układ panelu administracyjnego
+
+Każdy szablon zawiera:
+- Zdefiniowane obszary siatki
+- Responsywne układy
+- Efekty hover
+- Wsparcie dla subgrid
+- Efekty glassmorphism
+
+#### Efekty Glassmorphism
+
+Dostępne warianty przezroczystości:
+- `light` - 50% przezroczystości
+- `medium` - 30% przezroczystości
+- `dark` - 10% przezroczystości
+- `colored` - możliwość dodania własnego koloru z kontrolowaną przezroczystością
+
+```typescript
+import { GridManager, bentoTemplates, glassVariants } from '@stitches/core'
+
+// Użycie predefiniowanego szablonu
+const grid = new GridManager(bentoTemplates.modern)
+
+// Własny wariant z efektem szkła
+const customGrid = new GridManager({
+  ...bentoTemplates.portfolio,
+  defaultItemStyles: {
+    ...glassVariants.light,
+    padding: '1.5rem'
+  }
+})
+
+// Kolorowy wariant
+const coloredGrid = new GridManager({
+  ...bentoTemplates.dashboard,
+  defaultItemStyles: {
+    ...glassVariants.colored('#6366f1'),
+    padding: '1.5rem'
+  }
+})
+```
