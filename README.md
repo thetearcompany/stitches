@@ -10,6 +10,17 @@ Update June 19, 2023: Stitches is no longer actively maintained due to changes i
 
 Nowoczesna biblioteka CSS-in-JS z zaawansowanymi funkcjami i potężnym systemem stylowania.
 
+> **Unikalna cecha**: Stitches wykorzystuje język polski jako klucz do lepszego zrozumienia aramejskiego, co pozwala na bardziej intuicyjne tworzenie stylów i lepszą semantykę kodu.
+
+## 🎯 Dlaczego Stitches?
+
+Stitches wyróżnia się na tle innych bibliotek CSS-in-JS dzięki swojemu unikalnemu podejściu do semantyki i czytelności kodu. Wykorzystując język polski jako pomost do zrozumienia aramejskiego, oferujemy:
+
+- Bardziej intuicyjne nazewnictwo właściwości CSS
+- Lepsze zrozumienie semantyki kodu
+- Naturalne przejście między językami
+- Unikalne podejście do stylowania
+
 ## 🚀 Główne funkcje
 
 ### 🎨 System Stylowania
