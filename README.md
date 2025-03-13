@@ -8,7 +8,134 @@ Update June 19, 2023: Stitches is no longer actively maintained due to changes i
 
 # Stitches
 
-Nowoczesna biblioteka CSS-in-JS z zaawansowanymi funkcjami.
+Nowoczesna biblioteka CSS-in-JS z zaawansowanymi funkcjami i potężnym systemem stylowania.
+
+## 🚀 Główne funkcje
+
+### 🎨 System Stylowania
+- **TypeScript First** - pełne wsparcie dla TypeScript z automatycznym wnioskowaniem typów
+- **CSS-in-JS** - wydajny system stylowania z optymalizacją runtime
+- **Tematy** - elastyczny system motywów z obsługą ciemnego trybu
+- **Własności niestandardowe** - pełne wsparcie dla CSS Custom Properties
+- **Zagnieżdżanie CSS** - potężny system zagnieżdżania selektorów
+- **Warstwy CSS** - zaawansowany system zarządzania warstwami CSS
+
+### 📱 Responsywność
+- **Container Queries** - responsywne komponenty bazujące na rozmiarze kontenera
+- **Media Queries** - elastyczny system zapytań medialnych
+- **Breakpoints** - predefiniowane punkty przerwania
+
+### 🎭 Animacje
+- **System animacji** - potężny system animacji z obsługą keyframes
+- **Transitions** - płynne przejścia między stanami
+- **Transforms** - transformacje 2D i 3D
+
+### 📐 Układy
+- **Bento Grid** - nowoczesny system układów z predefiniowanymi szablonami
+- **Glassmorphism** - gotowe efekty szkła z kontrolowaną przezroczystością
+- **Subgrid** - zaawansowane układy z obsługą podsieci
+
+### 🎯 Predefiniowane szablony Bento Grid
+- **Modern** - nowoczesny układ z efektem szkła i gradientowym tłem
+- **Classic** - klasyczny układ z wyróżnionym elementem
+- **Magazine** - układ magazynowy z dużym nagłówkiem
+- **Portfolio** - układ galerii/portfolio
+- **Dashboard** - zaawansowany układ panelu administracyjnego
+
+### 🎨 Efekty Glassmorphism
+Dostępne warianty przezroczystości:
+- `light` - 50% przezroczystości
+- `medium` - 30% przezroczystości
+- `dark` - 10% przezroczystości
+- `colored` - możliwość dodania własnego koloru z kontrolowaną przezroczystością
+
+## 📦 Instalacja
+
+```bash
+npm install @stitches/core @stitches/react
+# lub
+yarn add @stitches/core @stitches/react
+```
+
+## 🚀 Szybki start
+
+```typescript
+import { createStitches } from '@stitches/core'
+import { createStitchesProvider } from '@stitches/react'
+
+// Konfiguracja Stitches
+const { styled, css, globalCss, keyframes, getCssText } = createStitches({
+  theme: {
+    colors: {
+      primary: '#007AFF',
+      secondary: '#5856D6'
+    }
+  }
+})
+
+// Komponent z animacją
+const AnimatedButton = styled('button', {
+  backgroundColor: '$primary',
+  color: 'white',
+  padding: '10px 20px',
+  borderRadius: '8px',
+  transition: 'all 0.3s ease',
+  '&:hover': {
+    transform: 'scale(1.05)',
+    backgroundColor: '$secondary'
+  }
+})
+
+// Użycie Bento Grid
+const Grid = styled('div', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(4, 1fr)',
+  gap: '1rem',
+  padding: '2rem',
+  ...glassStyles
+})
+
+// Użycie animacji
+const fadeIn = keyframes({
+  '0%': { opacity: 0 },
+  '100%': { opacity: 1 }
+})
+
+const FadeInComponent = styled('div', {
+  animation: `${fadeIn} 0.5s ease-in-out`
+})
+
+// Użycie Container Queries
+const ResponsiveCard = styled('div', {
+  containerType: 'inline-size',
+  containerName: 'card',
+  '@container (min-width: 400px)': {
+    display: 'grid',
+    gridTemplateColumns: '1fr 2fr'
+  }
+})
+
+// Użycie Bento Grid z efektem szkła
+const BentoGrid = styled('div', {
+  ...bentoTemplates.modern,
+  defaultItemStyles: {
+    ...glassVariants.light,
+    padding: '1.5rem'
+  }
+})
+```
+
+## 📚 Dokumentacja
+
+Szczegółowa dokumentacja dostępna jest w naszym [Wiki](https://github.com/yourusername/stitches/wiki).
+
+## 🤝 Współpraca
+
+Zapraszamy do współpracy! Proszę przeczytać nasz [Contributing Guide](CONTRIBUTING.md) przed wysłaniem pull requesta.
+
+## 📄 Licencja
+
+MIT - zobacz [LICENSE.md](LICENSE.md) po więcej szczegółów.
 
 ## Style your components with confidence
 
