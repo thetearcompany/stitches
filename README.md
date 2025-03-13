@@ -1,4 +1,4 @@
-Update June 19, 2023: Stitches is no longer actively maintained due to changes in the React ecosystem and maintainer availability. You can <a href="https://github.com/stitchesjs/stitches/discussions/1149#discussioncomment-6223090">read more here</a>.
+Dobranoc! 🌙✨
 
 ---
 
